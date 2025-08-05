@@ -7,15 +7,13 @@ module.exports = {
   ],
   theme: {
     extend: {
-    //   extend: {
-    //   screens: {
-    //     'iphone11': '414px', // Custom breakpoint
-    //   }
-    // }
+      // Example: Add custom screens or other extensions here
+      // screens: {
+      //   'iphone11': '414px',
+      // }
     },
   },
   plugins: [
     require('flowbite/plugin')
   ]
-
 };
