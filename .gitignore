@@ -1,18 +1,14 @@
-# Angular & TypeScript build output
+# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+
+# Compiled output
 /tmp
 /out-tsc
-/.angular/cache
 /bazel-out
 
-# Node dependencies
+# Node
 /node_modules
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Environment files
-.env
-.env.*.local
+npm-debug.log
+yarn-error.log
 
 # IDEs and editors
 .idea/
@@ -22,42 +18,24 @@ yarn-error.log*
 *.launch
 .settings/
 *.sublime-workspace
-*.sublime-project
 
-# VS Code
+# Visual Studio Code
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-.history/
+.history/*
 
-# Logs and temp
-*.log
-connect.lock
-libpeerconnection.log
-testem.log
-
-# Coverage
+# Miscellaneous
+/.angular/cache
+.sass-cache/
+/connect.lock
 /coverage
-/coverage-final.json
+/libpeerconnection.log
+testem.log
+/typings
 
 # System files
 .DS_Store
 Thumbs.db
-
-# Git-related
-*.orig
-*.rej
-
-# Tailwind CSS artifacts (if any custom output)
-/tailwind-output.css
-
-# Sass cache
-.sass-cache/
-
-# Typings
-/typings
-
-# Optional: Remove build outputs from tracking
-/build
