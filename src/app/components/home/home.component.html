@@ -1,0 +1,18 @@
+<div class="pl-4 pr-4 2xl:pl-39 2xl:pr-39 mt-3 scrollbar-hide">
+  <div routerLink="/carddetail" data-dial-init class="fixed end-10 2xl:end-45 bottom-5 group z-40 cursor-pointer">
+    <app-card [listCard]="listCard"></app-card>
+  </div>
+  
+  <app-ads></app-ads>
+  <!-- <div class="w-full h-[4px] mt-4 bg-gradient-to-r from-white via-gray-500/70 to-white animate-gradient-color z-0" ></div> -->
+  <div class="flex items-center justify-center text-xl xl:text-2xl font-semibold mt-6 dark:text-white">ទំនិញទាំងអស់</div>
+  <div class="w-full h-[2px] mt-2 bg-gradient-to-r from-white via-gray-500/70 to-white animate-gradient-color dark:bg-whiteSC-to-r dark:from-gray-900/100 dark:via-white dark:to-gray-900/100 dark:animate-whiteSC-color z-0 dark:"></div>
+  
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4 w-full">
+    @for (item of product; track $index) {
+      <app-product [item]="item" [card]="findcard(item.id)" (cardEvent)="event_($event)" (detailEvent)="detailEv_($event)" ></app-product>
+    }
+  </div>
+  <app-copyright></app-copyright>
+
+</div>

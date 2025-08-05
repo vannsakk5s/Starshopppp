@@ -1,0 +1,55 @@
+<div class="flex flex-col md:flex-row gap-8 max-w-5xl p-4 mx-auto">
+  <!-- Product Image -->
+  <ng-container *ngFor="let item of newlist; trackBy: trackById">
+    <div class="md:w-1/2 flex justify-center">
+      <img [src]="item.images" alt="{{ item.title }}" class="w-120 rounded-lg" />
+    </div>
+
+    <!-- Product Details -->
+    <div class="md:w-1/2">
+      <h1 class="text-2xl font-bold text-black dark:text-white mb-1">{{ item.title }}</h1>
+      <p class="text-gray-600 dark:text-gray-400 mb-3">{{ item.description }}</p>
+
+      <div class="flex items-start gap-4">
+        <p class="mb-10 self-center text-black dark:text-white">ជ្រើសរើស៖​​ </p>
+
+        <div
+          (click)="selectQuantity(1)"
+          class="flex flex-col items-center border border-gray-300 rounded-lg p-2 cursor-pointer">
+          <p class="font-extrabold text-black dark:text-white">១ដប</p>
+          <div class="text-black dark:text-white">
+            <p>តម្លៃ៖ $ {{ item.price * 1 }}</p>
+          </div>
+        </div>
+
+        <div
+          (click)="selectQuantity(12)"
+          class="flex flex-col items-center border border-gray-300 rounded-lg p-2 cursor-pointer">
+          <p class="font-extrabold text-black dark:text-white">១កេះ/១២ដប</p>
+          <div class="text-black dark:text-white">
+            <p>តម្លៃ៖ $ {{ item.price * 12 }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex space-x-2 mt-2">
+        <p>បញ្ចុះតម្លៃ៖​</p>
+        <p class="font-extrabold text-black">20%</p>
+      </div>
+      <div class="flex space-x-2 mt-2">
+        <p>តម្លៃសរុប៖ </p>
+        <p class="font-extrabold text-black" *ngIf="selectedQuantity">{{(selectedQuantity * 10) - (selectedQuantity * 10) * 20/100 }}$</p>
+      </div>
+
+      <!-- Actions -->
+      <div class="mt-6 flex flex-col gap-3">
+        <button
+          (click)="addToBag()"
+          routerLink="/carddetail"
+          class="bg-gray-600 dark:bg-gray-200 text-white dark:text-black rounded-full px-4 py-3 font-bold hover:bg-gray-800 dark:hover:bg-gray-800">
+          បញ្ចូលក្នុងកន្ត្រក
+          <span *ngIf="selectedQuantity"> (x{{ selectedQuantity }})</span>
+        </button>
+      </div>
+    </div>
+  </ng-container>
+</div>

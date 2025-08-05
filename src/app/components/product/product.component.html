@@ -1,0 +1,113 @@
+
+    
+@if (card) {
+    
+    <div class="w-full kantumruy-pro bg-white border border-gray-200 rounded-2xl shadow-sm dark:bg-gray-800 dark:border-gray-700 transform hover:scale-102   ">
+        
+        <a (click)="addDetail(item)" routerLink="/detail">
+            <img class="p-2.5 rounded-[20px]" [src]="card.images" alt="product image" />
+        </a>
+        <div class="px-2.5 pb-2.5">
+            <a (click)="addDetail(item)" routerLink="/detail">
+                <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{{card.title}}</h5>
+                <p class="text-gray-600 dark:text-gray-300 pt-1.5 line-clamp-3">{{card
+                .description}}</p>
+            </a>
+            <div class="flex items-center mt-2.5 mb-5">
+                <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                    <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                    </svg>
+                    <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                    </svg>
+                    <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                    </svg>
+                    <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                    </svg>
+                    <svg class="w-4 h-4 text-gray-200 dark:text-gray-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                    </svg>
+                </div>
+                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-sm dark:bg-blue-200 dark:text-blue-800 ms-3">4.0</span>
+            </div>
+            <div class="flex justify-between items-center">
+                <div>
+                    <div class="flex items-center">
+                        <p class="text-base font-normal leading-tight text-gray-500 dark:text-gray-300 line-through decoration-gray-500">$ {{card.price}}</p>
+                        <span class="bg-red-100 text-red-800 text-xs font-semibold px-1.5 py-0.5 rounded-sm ms-1">20%</span>
+                    </div>
+                    <span class="text-2xl font-bold text-gray-900 dark:text-white">$ {{card.price - (card.price * 20/100)}}</span>
+                </div>
+                <div class="relative">
+                    <div class="mb-1">
+                        <div class="absolute bg-red-700 rounded-2xl pl-2 pr-2 pt-1 pb-1 ml-25.5">
+                            <p class="text-sm text-white">{{card.quantity}}</p>
+                        </div>
+                    </div>
+
+                    <button (click)="addCard(item)" class=" text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xd px-4 py-4 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">បញ្ចូលក្នុងកន្ត្រក</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+}
+@else {
+    
+    
+    <div class="w-full kantumruy-pro bg-white border border-gray-200 rounded-2xl shadow-sm dark:bg-gray-800 dark:border-gray-700 transform hover:scale-102 ">
+        
+        <a (click)="addDetail(item)" routerLink="/detail">
+            <img class="p-2.5 rounded-[20px]" [src]="item.images" alt="product image" />
+        </a>
+        <div class="px-2.5 pb-2.5">
+            <a (click)="addDetail(item)" routerLink="/detail">
+                <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{{item.title}}</h5>
+                <p class="text-gray-600 dark:text-gray-300 pt-1.5 line-clamp-3">{{item.description}}</p>
+            </a>
+            <div class="flex items-center mt-2.5 mb-5">
+                <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                    <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                    </svg>
+                    <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                    </svg>
+                    <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                    </svg>
+                    <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                    </svg>
+                    <svg class="w-4 h-4 text-gray-200 dark:text-gray-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                    </svg>
+                </div>
+                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-sm dark:bg-blue-200 dark:text-blue-800 ms-3">4.0</span>
+            </div>
+            <div class="flex justify-between items-center">
+                <div>
+                    <div class="flex items-center">
+                        <p class="text-base font-normal leading-tight text-gray-500 dark:text-gray-300 line-through decoration-gray-500">$ {{item.price}}</p>
+                        <span class="bg-red-100 text-red-800 text-xs font-semibold px-1.5 py-0.5 rounded-sm ms-1">20%</span>
+                    </div>
+                    <span class="text-2xl font-bold text-gray-900 dark:text-white">$ {{item.price - (item.price * 20/100)}}</span>
+                </div>
+                <div class="relative">
+                    <div class="mb-1">
+                        <!-- <div class="absolute bg-red-700 rounded-2xl pl-2 pr-2 pt-1 pb-1 ml-25.5">
+                            <p class="text-sm text-white">{{item.quantity}}</p>
+                        </div> -->
+                    </div>
+
+                    <button (click)="addCard(item)" class=" text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xd px-4 py-4 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">បញ្ចូលក្នុងកន្ត្រក</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+}
