@@ -1,0 +1,35 @@
+@keyframes slideLeft {
+    0% {
+        transform: translateX(450%);
+    }
+
+    30% {
+        transform: translateX(200%); /* Fully visible, center-left */
+    }
+
+    50% {
+        transform: translateX(0%); /* Fully visible, left */
+    }
+    
+    60% {
+        transform: translateX(0%); /* Pause here */
+    }
+
+    70% {
+        transform: translateX(-50%); /* Start sliding out */
+    }
+    
+    80% {
+        transform: translateX(-100%); /* Fully visible, left */
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: slideLeft 12s linear infinite;
+}

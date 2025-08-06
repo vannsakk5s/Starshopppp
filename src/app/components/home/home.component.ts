@@ -4,11 +4,12 @@ import { ProductComponent } from '../product/product.component';
 import { CopyrightComponent } from '../copyright/copyright.component';
 import { CardComponent } from '../card/card.component';
 import { RouterLink } from '@angular/router';
+import { RuntxtComponent } from '../runtxt/runtxt.component';
 // import { DataserviceService } from '../../service/dataservice.service';
 
 @Component({
   selector: 'app-home',
-  imports: [AdsComponent, ProductComponent, CopyrightComponent, CardComponent, RouterLink],
+  imports: [AdsComponent, ProductComponent, CopyrightComponent, CardComponent, RouterLink, RuntxtComponent ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

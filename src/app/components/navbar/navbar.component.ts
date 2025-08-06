@@ -1,10 +1,11 @@
 import { Component,  } from '@angular/core';
 import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 import { NgClass } from '@angular/common';
+import { ProfileComponent } from '../profile/profile.component';
 
 @Component({
   selector: 'app-navbar',
-  imports: [ RouterLink, RouterLinkActive, RouterOutlet, NgClass],
+  imports: [ RouterLink, RouterLinkActive, RouterOutlet, NgClass, ProfileComponent ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
