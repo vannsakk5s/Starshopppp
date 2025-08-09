@@ -1,0 +1,115 @@
+<div class="flex justify-center scrollbar-hide">
+    <div class="relative w-full py-5 grid grid-cols-1 md:grid-cols-2 gap-6">  
+    <!-- Left: About PRIME -->
+      <a href="#" class="block p-6 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-lg  shadow-md">
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-100">អំពី Prime</h5>
+        <div class="w-full h-[1px] mb-2 bg-gradient-to-r from-white via-gray-500/70 to-white animate-gradient-color dark:bg-whiteSC-to-r dark:from-gray-800/100 dark:via-white dark:to-gray-800/100 dark:animate-whiteSC-color z-0"></div>
+        <div class="font-normal text-gray-900 dark:text-gray-300 space-y-4">
+          <p>
+            យើងបានបង្កើត PRIME ដើម្បីបង្ហាញអោយឃើញថា​មានអ្វីកើតឡើងនៅពេលគូប្រជែងចូលរួមគ្នាជាបងប្អូន និងដៃគូអាជីវកម្ម ដើម្បីបំពេញចន្លោះរវាងរសជាតិឆ្ងាញ់ និងមុខងារ។
+          </p>
+          <p>
+            យើងបានដាក់ចេញផលិតផលដំបូងរបស់យើងគឺ PRIME Hydration នៅឆ្នាំ 2022 ហើយចាប់តាំងពីពេលនោះមក យើងបានបន្តខិតខំធ្វើការជាច្រើនម៉ោង...
+          </p>
+          <p>
+            ឥឡូវនេះពេលដែលយើងទាំងពីរប្រយុទ្ធសម្រាប់ក្រុមដូចគ្នា យើងជឿជាក់ចិត្តថា មេឃគឺជាកម្រិតដ៏ខ្ពស់បំផុត។ យើងមានអារម្មណ៍សោមនស្សចិត្តចំពោះដំណើរការបង្កើតម៉ាកពិតៗមួយ...
+          </p>
+        </div>
+        <p class="font-extrabold text-gray-900 dark:text-gray-100 text-xl mt-4">ភេសជ្ជៈថ្មី</p>
+        <div class="mt-4">
+          <img class="h-auto rounded-md" src="/icepri.png" alt="">
+        </div>
+        <div class="flex justify-between space-x-1 mt-4">
+          <div class="border-1 border-gray-400 dark:border-gray-300 dark:bg-blue-300 rounded-lg">
+            <img class="h-15 w-15 sm:h-20 sm:w-20 md:h-15 md:w-15 lg:h-20 lg:w-20 xl:h-25 xl:w-25 p-2" src="/Coconut.png" alt="">
+          </div>
+          <div class="border-1 border-gray-400 dark:border-gray-300 dark:bg-blue-300 rounded-lg">
+            <img class="h-15 w-15 sm:h-20 sm:w-20 md:h-15 md:w-15 lg:h-20 lg:w-20 xl:h-25 xl:w-25 p-2" src="/Caffeine.png" alt="">
+          </div>
+          <div class="border-1 border-gray-400 dark:border-gray-300 dark:bg-blue-300 rounded-lg">
+            <img class="h-15 w-15 sm:h-20 sm:w-20 md:h-15 md:w-15 lg:h-20 lg:w-20 xl:h-25 xl:w-25 p-2" src="/Electrolytes.png" alt="">
+          </div>
+          <div class="border-1 border-gray-400 dark:border-gray-300 dark:bg-blue-300 rounded-lg">
+            <img class="h-15 w-15 sm:h-20 sm:w-20 md:h-15 md:w-15 lg:h-20 lg:w-20 xl:h-25 xl:w-25 p-2" src="/B_Vitamins.png" alt="">
+          </div>
+          <div class="border-1 border-gray-400 dark:border-gray-300 dark:bg-blue-300 rounded-lg">
+            <img class="h-15 w-15 sm:h-20 sm:w-20 md:h-15 md:w-15 lg:h-20 lg:w-20 xl:h-25 xl:w-25 p-2" src="/Antioxidants.png" alt="">
+          </div>
+        </div>
+        <p class="text-md text-black dark:text-gray-100 mt-8 m-2">
+          យើងខ្ញុំ ជាអ្នកនាំចូលផ្ដាច់មុខភេស្ជ​​ Prime នៅប្រទេសកម្ពុជា។
+        </p>
+
+      </a>
+
+
+    <div class="p-6 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-md shadow-md">
+      <h2 class="text-2xl text-gray-900 dark:text-gray-100 font-bold mb-2">ទំនាក់ទំនង</h2>
+      <div class="w-full h-[1px] mb-2 bg-gradient-to-r from-white via-gray-500/70 to-white animate-gradient-color dark:bg-whiteSC-to-r dark:from-gray-800/100 dark:via-white dark:to-gray-800/100 dark:animate-whiteSC-color z-0"></div>
+
+      <form (ngSubmit)="sub()" #contactForm="ngForm">
+        <!-- Full Name -->
+        <label for="fullName" class="flex mb-2 text-gray-900 dark:text-gray-100 font-medium">
+          ឈ្មោះពេញ <span class="text-red-500">*</span>
+        </label>
+        <input id="fullName" name="fullName" [(ngModel)]="formData.fullName" type="text" placeholder="បញ្ចូលឈ្មោះ"
+          class="w-full px-4 py-2 mb-4 border text-gray-600 dark:text-gray-400 border-gray-300 rounded" />
+
+        <!-- Email -->
+        <label for="email" class="flex mb-2 text-gray-900 dark:text-gray-100 font-medium">
+          អ៊ីមែល <span class="text-red-500">*</span>
+        </label>
+        <input id="email" name="email" [(ngModel)]="formData.email" type="email" placeholder="បញ្ជូលអ៊ីមែល"
+          class="w-full px-4 py-2 mb-4 border text-gray-600 dark:text-gray-400 border-gray-300 rounded" />
+
+        <!-- Subject -->
+        <label for="subject" class="flex mb-2 text-gray-900 dark:text-gray-100 font-medium">
+          ប្រធានបទ <span class="text-red-500">*</span>
+        </label>
+        <select id="subject" name="subject" [(ngModel)]="formData.subject"
+          class="w-full px-4 py-2 mb-4 border border-gray-300 rounded bg-white dark:text-white dark:bg-gray-800">
+          <option value="">ជ្រើសរើសប្រធានបទ</option>
+          <option>សំណួរទូទៅ</option>
+          <option>ជំនួយ</option>
+          <option>មតិយោបល់</option>
+        </select>
+
+        <!-- Message -->
+        <label for="message" class="flex mb-2 text-gray-900 dark:text-gray-100 font-medium">
+          សារ <span class="text-red-500">*</span>
+        </label>
+        <textarea id="message" name="message" [(ngModel)]="formData.message" rows="5"
+          placeholder="សូមសរសេរសាររបស់អ្នកនៅទីនេះ..."
+          class="w-full px-4 py-2 mb-4 border text-gray-600 dark:text-gray-400 border-gray-300 rounded"></textarea>
+
+        <!-- Attach Files -->
+        <div class="w-full px-4 py-2 mb-4 border border-dashed border-gray-400 bg-gray-100 dark:border-gray-300 dark:bg-gray-800 rounded text-center cursor-pointer">
+                <input id="fileUpload" type="file" (change)="onFileSelected($event)" multiple class="hidden" id="fileUpload" />
+                <label for="fileUpload" class="cursor-pointer text-sm text-gray-700 font-medium flex items-center justify-center gap-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#4B5563" class="size-6 h-4 w-4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m9 13.5 3 3m0 0 3-3m-3 3v-6m1.06-4.19-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z" />
+                  </svg>
+                  <p class="text-md text-gray-600 dark:text-gray-400">ឯកសារភ្ជាប់</p>
+                </label>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">ភ្ជាប់ឯកសាររហូតដល់ ១០ ឯកសារ។ ទំហំអតិបរមា សម្រាប់ឯកសារនីមួយៗ គឺ ១០ ម៉េកាបៃ។</p>
+              </div>
+
+        <!-- Submit -->
+        <button type="submit" class="w-full py-3 bg-blue-600 text-white font-semibold rounded hover:bg-blue-800 transition">
+          បញ្ជូន
+        </button>
+      </form>
+    </div>
+
+</div> 
+
+    <div *ngIf="showAlert" class="flex absolute items-center p-4 md:mt-[15%] text-sm text-green-800 border border-green-300 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400 dark:border-green-800" role="alert">
+        <svg class="shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+        </svg>
+        <span class="sr-only">Info</span>
+        <div>
+            <span class="font-medium">Success alert!</span> ទិន្នន័យត្រូវបានរក្សាទុក !!!
+        </div>
+    </div>
+</div>

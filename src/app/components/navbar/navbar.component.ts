@@ -21,5 +21,6 @@ export class NavbarComponent {
     this.isNavbarOpen = false; // close menu after clicking a link
   }
   logo: string = 'brand style.png';
+  
 
 }

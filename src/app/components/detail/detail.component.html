@@ -37,7 +37,7 @@
       </div>
       <div class="flex space-x-2 mt-2">
         <p>តម្លៃសរុប៖ </p>
-        <p class="font-extrabold text-black" *ngIf="selectedQuantity">{{(selectedQuantity * 10) - (selectedQuantity * 10) * 20/100 }}$</p>
+        <p class="font-extrabold text-black" *ngIf="selectedQuantity">{{(selectedQuantity * item.price) - (selectedQuantity * item.price) * 20/100 }}$</p>
       </div>
 
       <!-- Actions -->
