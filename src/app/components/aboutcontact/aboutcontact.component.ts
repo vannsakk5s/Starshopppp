@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms'; // 👉 នេះសំខាន់
-import { NgIf } from '@angular/common';
+// import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-aboutcontact',
-  imports: [ FormsModule, NgIf ],
+  imports: [ FormsModule ],
   templateUrl: './aboutcontact.component.html',
   styleUrl: './aboutcontact.component.css'
 })
@@ -24,11 +24,11 @@ export class AboutcontactComponent {
     }
   }
 
-  showAlert = false;
+  // showAlert = false;
 
   sub() {
     // ចាប់ទិន្នន័យចាស់ពី localStorage
-    const existingDataJSON = localStorage.getItem('contactFormList');
+    const existingDataJSON = localStorage.getItem('contactList');
     let existingData = [];
 
     if (existingDataJSON) {
@@ -46,14 +46,16 @@ export class AboutcontactComponent {
     existingData.push({...this.formData});
 
     // រក្សាទុក list ទាំងមូលវិញទៅ localStorage
-    localStorage.setItem('contactFormList', JSON.stringify(existingData));
+    localStorage.setItem('contactList', JSON.stringify(existingData));
 
     localStorage.setItem('yourKey', 'yourData');
-    this.showAlert = true;
+    // this.showAlert = true;
 
-    setTimeout(() => {
-      this.showAlert = false;
-    }, 1500); // hide alert after 3 seconds
+    alert("success !!!")
+
+    // setTimeout(() => {
+    //   this.showAlert = false;
+    // }, 1500); // hide alert after 3 seconds
 
     // Reset formData ទៅ initial state
     this.formData = {

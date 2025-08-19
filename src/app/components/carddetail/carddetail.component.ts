@@ -1,6 +1,7 @@
 import { Component, ChangeDetectorRef } from '@angular/core';
 import { CurrencyPipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
+declare const AOS: any; // Declare AOS from the global window object
 
 @Component({
   selector: 'app-carddetail',
@@ -18,6 +19,15 @@ export class CarddetailComponent {
   detailList: any[] = [];
 
   constructor(private cdr: ChangeDetectorRef) {}
+
+  ngAfterViewInit() {
+    AOS.init({
+      // You can add options here, e.g.
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+    });
+  }
 
   ngOnInit() {
     const detailList_: any = localStorage.getItem('listCard');

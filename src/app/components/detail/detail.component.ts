@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { NgIf, NgFor } from '@angular/common';
+declare const AOS: any; // Declare AOS from the global window object
 
 @Component({
   selector: 'app-detail',
@@ -15,6 +16,15 @@ export class DetailComponent {
   newlist: any[] = [];
   listCard: any[] = [];
   selectedQuantity: number = 1; // default to 1 bottle
+
+  ngAfterViewInit() {
+    AOS.init({
+      // You can add options here, e.g.
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+    });
+  }
 
   ngOnInit() {
     const stored = localStorage.getItem('listDetail') ?? '[]';

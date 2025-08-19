@@ -44,6 +44,7 @@ export class ProductComponent {
   addDetail(product:any ) {
     this.detailEvent.emit(product);
   }
+  
 
 }
 
